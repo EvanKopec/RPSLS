@@ -6,6 +6,7 @@ class Human(Player):
         super().__init__()
 
     def choice_made(self):
+        self.choice_made = choice
         choice = input('Choose 0 for Rock, 1 for Papaer, 2 for Scissors, 3 Lizard, 4 Spock')
         while choice == ['0', '1', '2', '3', '4']:
             print(choice)

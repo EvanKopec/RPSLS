@@ -1,7 +1,7 @@
 from human import Human
 
 test = Human()
-test.choice_made()
+test.choice_made("2")
 
 
 

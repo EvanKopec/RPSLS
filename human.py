@@ -2,15 +2,17 @@ from player import Player
 
 class Human(Player):
     def __init__(self):
-        self.choice_made = ''
+        self.choice = ''
         super().__init__()
 
     def choice_made(self):
-        self.choice_made = choice
-        choice = input('Choose 0 for Rock, 1 for Papaer, 2 for Scissors, 3 Lizard, 4 Spock')
-        while choice == ['0', '1', '2', '3', '4']:
-            print(choice)
-        else:
-            print('Thats not a option, try again.')
+
+        user_input = int(input('0 for rock, 1 for paper, 2 for scissors, 3 for lizard, 4 for spock'))
+        gesture = False
+        while gesture is False:
+            if user_input == 0:
+                user_input = self.gestures[0]
+                gesture is True
+      
     
         

@@ -11,7 +11,7 @@ class Human(Player):
             selected_gesture = int(input('0 for rock, 1 for paper, 2 for scissors, 3 for lizard, 4 for spock'))
             if selected_gesture == 0:
                 self.selected_gesture = self.gestures[0]
-                gesture is True
+                gesture = True
                 print(self.selected_gesture)
             elif selected_gesture == 1:
                 self.selected_gesture = self.gestures[1]

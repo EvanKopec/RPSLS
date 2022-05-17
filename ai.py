@@ -3,33 +3,32 @@ import random
 
 class AI(Player):
     def __init__(self):
-        self.choice = ''
         super().__init__()
 
 
     def choice_made(self):
         gesture = False
         while gesture is False:
-            ai_input = (random.choice(self.gestures))
-            if ai_input == 'Rock':
-                ai_input = self.gestures[0]
-                gesture is True
-                return ai_input
-            elif ai_input == 'Paper':
-                ai_input = self.gestures[1]
+            selected_gesture = (random.choice(self.gestures))
+            if selected_gesture == 'Rock':
+                self.selected_gesture = self.gestures[0]
                 gesture = True
-                return ai_input
-            elif ai_input == 'Scissors':
-                ai_input = self.gestures[2]
+                print(self.selected_gesture)
+            elif selected_gesture == 'Paper':
+                self.selected_gesture = self.gestures[1]
                 gesture = True
-                return ai_input
-            elif ai_input == 'Lizard':
-                ai_input = self.gestures[3]
+                print(self.selected_gesture)
+            elif selected_gesture == 'Scissors':
+                self.selected_gesture = self.gestures[2]
                 gesture = True
-                return ai_input
-            elif ai_input == 'Spock':
-                ai_input = self.gestures[4]
+                print(self.selected_gesture)
+            elif selected_gesture == 'Lizard':
+                self.selected_gesture = self.gestures[3]
                 gesture = True
-                return ai_input
+                print(self.selected_gesture)
+            elif selected_gesture == 'Spock':
+                self.selected_gesture = self.gestures[4]
+                gesture = True
+                print(self.selected_gesture)
             else:
                 print('Thats not a option, try again!')

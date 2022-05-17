@@ -1,14 +1,12 @@
 from ai import AI
 from human import Human
-from player import Player
 
 
-class Game(AI,Human):
+
+class Game():
     def __init__(self):
-        self.players = int
-        self.welcome = ''
-        super().__init__()
-
+        self.player_one = None
+        self.player_two = None
     def run_game(self):
         self.display_welcome()
         self.how_many_players()
@@ -49,66 +47,77 @@ class Game(AI,Human):
             if self.player_one.selected_gesture == self.player_one.gestures[0] and self.player_two.selected_gesture == self.player_two.gestures[2]:
                 self.player_one.wins += 1
                 print('Player One wins the round')
-            else:
-                print('Broken')
-
-
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 2 and self.player_two.choice_made() == 1:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 2 and self.player_one.choice_made == 1:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 1 and self.player_two.choice_made() == 0:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 0 and self.player_two.choice_made() == 2:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 0 and self.player_two.choice_made() == 2:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 0 and self.player_two.choice_made() == 2:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 0 and self.player_two.choice_made() == 2:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 0 and self.player_two.choice_made() == 2:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 0 and self.player_two.choice_made() == 2:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-        #  if self.player_one.choice_made() == 0 and self.player_two.choice_made() == 2:
-        #     self.player_one.wins += 1
-        #     print('Player One wins the round')
-        #  elif self.player_two.choice_made() == 0 and self.player_one.choice_made == 2:
-        #     self.player_two.wins += 1
-        #     print('Player Two wins!')
-
+            elif self.player_two.selected_gesture == self.player_two.gestures[0] and self.player_one.selected_gesture == self.player_one.gestures[2]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[2] and self.player_two.selected_gesture == self.player_two.gestures[1]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[2] and self.player_one.selected_gesture == self.player_one.gestures[1]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[1] and self.player_two.selected_gesture == self.player_two.gestures[0]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[1] and self.player_one.selected_gesture == self.player_one.gestures[0]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[0] and self.player_two.selected_gesture == self.player_two.gestures[3]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[0] and self.player_one.selected_gesture == self.player_one.gestures[3]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[3] and self.player_two.selected_gesture == self.player_two.gestures[4]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[3] and self.player_one.selected_gesture == self.player_one.gestures[4]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[4] and self.player_two.selected_gesture == self.player_two.gestures[2]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[4] and self.player_one.selected_gesture == self.player_one.gestures[2]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[2] and self.player_two.selected_gesture == self.player_two.gestures[3]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[2] and self.player_one.selected_gesture == self.player_one.gestures[3]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[3] and self.player_two.selected_gesture == self.player_two.gestures[1]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[3] and self.player_one.selected_gesture == self.player_one.gestures[1]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[1] and self.player_two.selected_gesture == self.player_two.gestures[4]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[1] and self.player_one.selected_gesture == self.player_one.gestures[4]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[4] and self.player_two.selected_gesture == self.player_two.gestures[0]:
+                self.player_one.wins += 1
+                print('Player One wins the round')
+            elif self.player_two.selected_gesture == self.player_two.gestures[4] and self.player_one.selected_gesture == self.player_one.gestures[0]:
+                self.player_two.wins += 1
+                print('Player two wins the round!')
+            if self.player_one.selected_gesture == self.player_one.gestures[0] and self.player_two.selected_gesture == self.player_two.gestures[0]:
+                self.player_one.wins += 0
+                print('Tie game, shoot again!')
+            elif self.player_one.selected_gesture == self.player_one.gestures[1] and self.player_two.selected_gesture == self.player_two.gestures[1]:
+                self.player_one.wins += 0
+                print('Tie game, shoot again!')
+            elif self.player_two.selected_gesture == self.player_two.gestures[2] and self.player_one.selected_gesture == self.player_one.gestures[2]:
+                self.player_two.wins += 0
+                print('Tie game, shoot again!')
+            elif self.player_one.selected_gesture == self.player_one.gestures[3] and self.player_two.selected_gesture == self.player_two.gestures[3]:
+                self.player_one.wins += 0
+                print('Tie game, shoot again!')
+            elif self.player_two.selected_gesture == self.player_two.gestures[4] and self.player_one.selected_gesture == self.player_one.gestures[4]:
+                self.player_two.wins += 0
+                print('Tie game, shoot again!')
+            
                     

@@ -1,7 +1,7 @@
 from game import Game
 
 game_one = Game()
-game_one.how_many_players()
+game_one.run_game()
 
 
 #(10 points): As a player, I want the correct player to win a given round based on the choices made by each player. See Framework document for game rules!

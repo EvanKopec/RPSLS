@@ -7,7 +7,7 @@ class AI(Player):
         super().__init__()
 
 
-    def choice_made_ai(self):
+    def choice_made(self):
         gesture = False
         while gesture is False:
             ai_input = (random.choice(self.gestures))

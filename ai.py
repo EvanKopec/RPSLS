@@ -13,22 +13,22 @@ class AI(Player):
             if selected_gesture == 'Rock':
                 self.selected_gesture = self.gestures[0]
                 gesture = True
-                print(self.selected_gesture)
+                print(f'You selected {self.selected_gesture}!')
             elif selected_gesture == 'Paper':
                 self.selected_gesture = self.gestures[1]
                 gesture = True
-                print(self.selected_gesture)
+                print(f'You selected {self.selected_gesture}!')
             elif selected_gesture == 'Scissors':
                 self.selected_gesture = self.gestures[2]
                 gesture = True
-                print(self.selected_gesture)
+                print(f'You selected {self.selected_gesture}!')
             elif selected_gesture == 'Lizard':
                 self.selected_gesture = self.gestures[3]
                 gesture = True
-                print(self.selected_gesture)
+                print(f'You selected {self.selected_gesture}!')
             elif selected_gesture == 'Spock':
                 self.selected_gesture = self.gestures[4]
                 gesture = True
-                print(self.selected_gesture)
+                print(f'You selected {self.selected_gesture}!')
             else:
                 print('Thats not a option, try again!')

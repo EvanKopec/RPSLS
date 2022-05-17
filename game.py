@@ -11,6 +11,7 @@ class Game():
         self.display_welcome()
         self.how_many_players()
         self.round()
+        self.display_winner()
 
     def display_welcome(self):
         print('Welcome')
@@ -35,10 +36,7 @@ class Game():
             self.player_one = Human()
             self.player_two = Human()
 
-    def player_turns(self):
-        pass
 
-        
     def round(self):
         
         while self.player_one.wins < 2 and self.player_two.wins < 2:
@@ -120,4 +118,9 @@ class Game():
                 self.player_two.wins += 0
                 print('Tie game, shoot again!')
             
+    def display_winner(self):
+         if self.player_one.wins == 2:
+            print('Dude hecken awesome job, you won!') 
+         elif self.player_two.wins == 2:
+            print('Dude hecken awesome job, you won!') 
                     

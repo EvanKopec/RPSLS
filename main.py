@@ -1,13 +1,9 @@
 from human import Human
 
 test = Human()
-<<<<<<< HEAD
-test.choice_made("2")
 
-=======
 user_input_choice = test.choice_made()
 print(user_input_choice)
->>>>>>> 7d6dcc428369c184eba22d805f4d6c1f089876b1
 
 
 #(5 points): As a developer, I want to make at least 10 commits with descriptive messages.
